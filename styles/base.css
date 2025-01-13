@@ -5,10 +5,12 @@
 }
 
 body {
-	font-family: "Sansita", sans-serif;
+	font-family: 'Merriweather', serif;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zain', sans-serif;
+}
 
 header {
     background-color: #010911;
