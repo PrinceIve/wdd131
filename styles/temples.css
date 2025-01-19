@@ -1,0 +1,116 @@
+/* temples.css - Mobile View */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #c8e0f4;
+}
+
+header {
+    background-color: #031927;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul.open {
+    display: flex; /* Show menu when hamburger is clicked */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ba1200;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.temples-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+figure {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #031927;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
