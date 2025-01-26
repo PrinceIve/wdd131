@@ -10,15 +10,16 @@
 /* Base Styles */
 body {
     margin: 0;
-      font-family: "Playwrite IN", serif;
+    font-family: "Playwrite IN", serif;
     color: var(--blue);
     background-color: var(--gray);
 }
 
-h1, h2 {
+h2{
     font-weight: bold;
     text-align: center;
     margin: 0;
+    font-family: "Roboto Condensed", serif;
 }
 
 /* Hero Section */
@@ -105,6 +106,16 @@ h1, h2 {
     gap: 0.5rem;
 }
 
+.weather-icon {
+    display: inline-block;
+    width: 24px; /* Default size */
+    height: 24px;
+    background-image: url('images/cloudy.svg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 
 .weather p {
     margin: 0.5rem 0;
@@ -131,5 +142,9 @@ footer {
 
     .weather h2::after {
         font-size: 1rem;
+    }
+    .weather-icon {
+        width: 20px; 
+        height: 20px;
     }
 }
