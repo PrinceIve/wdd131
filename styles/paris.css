@@ -110,9 +110,7 @@ h2, ul,.weather{
     display: inline-block;
     width: 24px; /* Default size */
     height: 24px;
-    background-image: url('images/cloudy.svg'); 
-    background-repeat: no-repeat;
-    background-size: contain;
+  
 }
 
 
