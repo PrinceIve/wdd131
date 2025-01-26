@@ -4,13 +4,13 @@
     --white: #FFFFFF;
     --red: #EF4135;
     --gray: #F2F2F2;
-    --font-primary: 'Merriweather', serif;
+
 }
 
 /* Base Styles */
 body {
     margin: 0;
-    font-family: var(--font-primary);
+      font-family: "Playwrite IN", serif;
     color: var(--blue);
     background-color: var(--gray);
 }
