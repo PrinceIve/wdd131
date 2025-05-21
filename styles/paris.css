@@ -1,148 +1,143 @@
-/* Global Variables */
 :root {
-    --blue: #0055A4;
-    --white: #FFFFFF;
-    --red: #EF4135;
-    --gray: #F2F2F2;
-
-}
-
-/* Base Styles */
-body {
+    --blue: #0055a4;
+    --white: #ffffff;
+    --red: #520803;
+    --gray: #f2f2f2;
+  }
+  
+  body {
     margin: 0;
     font-family: "Playwrite IN", serif;
-    color: var(--blue);
     background-color: var(--gray);
-}
-
-h2, ul,.weather{
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    font-family: "Roboto Condensed", serif;
-}
-
-/* Hero Section */
-.hero {
+    color: var(--blue);
+  }
+  
+  /* Hero Section */
+  .hero {
     position: relative;
     width: 100%;
     height: 60vh;
-    background-color: var(--blue);
     overflow: hidden;
-}
-
-.hero h1 {
+    background-color: var(--blue);
+  }
+  
+  .hero h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
-    font-size: 4rem; /* Increased for better visibility */
-    font-weight: 700; /* Bolder text */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow */
-    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
     z-index: 2;
-}
-
-/* Add an overlay effect to the hero */
-.hero::before {
+    text-align: center;
+  }
+  
+  .hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Darkens the image */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
-}
-.hero img {
+  }
+  
+  .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0; /* Image stays behind the overlay */
-}
-
-
-/* Data Section */
-.data {
-    background-color: var(--white);
-    margin: 2rem auto;
-    padding: 1rem;
+    z-index: 0;
+  }
+  
+  /* Main Grid Layout */
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Reusable Box Styling */
+  .info-box {
     border-radius: 10px;
-    max-width: 80%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.data ul {
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Data Section */
+  .data {
+    background-color: var(--white);
+  }
+  
+  .data h2 {
+    color: var(--blue);
+    text-align: center;
+  }
+  
+  .data ul {
     list-style: none;
     padding: 0;
-}
-
-.data li {
-    padding: 0.5rem 0;
-}
-
-.data strong {
+    line-height: 1.8;
+  }
+  
+  .data li strong {
     color: var(--red);
-}
-
-/* Weather Section */
-.weather {
+  }
+  
+  /* Weather Section */
+  .weather {
     background-color: var(--blue);
     color: var(--white);
-    margin: 2rem auto;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 80%;
     text-align: center;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.weather h2 {
+  }
+  
+  .weather h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-}
-
-.weather-icon {
-    display: inline-block;
-    width: 24px; /* Default size */
-    height: 24px;
+  }
   
-}
-
-
-
-.weather p {
+  .weather-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .weather p {
     margin: 0.5rem 0;
-}
-
-/* Footer Section */
-footer {
+  }
+  
+  /* Footer */
+  footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--blue);
     color: var(--white);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+      font-size: 2.5rem;
     }
-
-    .data, .weather {
-        max-width: 90%;
-        padding: 0.5rem;
+  
+    .main-grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
     }
-
-    .weather h2::after {
-        font-size: 1rem;
+  
+    .info-box {
+      padding: 1rem;
     }
-    .weather-icon {
-        width: 20px; 
-        height: 20px;
+  
+    .weather-icon img {
+      width: 20px;
+      height: 20px;
     }
-}
+  }
+  

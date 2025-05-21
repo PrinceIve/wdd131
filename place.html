@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dream Vacation: Paris</title>
-    <link rel="stylesheet" href="styles/paris.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Prince Ive Eriabie">
-    <meta name="description" content="Prince Ive Eriabie Paris">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
-    <script src="scripts/paris.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dream Vacation: Paris</title>
+  <link rel="stylesheet" href="styles/paris.css" />
+  <meta name="author" content="Prince Ive Eriabie" />
+  <meta name="description" content="Prince Ive Eriabie Paris" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet" />
+  <script src="scripts/paris.js" defer></script>
 </head>
 <body>
-    <header class="hero">
-        <h1>Paris</h1>
-        <picture>
-            <source srcset="images/paris-large1.webp" media="(min-width: 769px)">
-            <source srcset="images/paris-small.webp" media="(max-width: 768px)">
-            <img src="images/paris-large1.webp" alt="Eiffel Tower with the Seine River">
-        </picture>
-    </header>
-    
-    
-    <main>
-        <section class="data">
-            <h2>Data</h2>
-            <ul>
-                <li><strong>Area:</strong> 105.4 sq km</li>
-                <li><strong>Population:</strong> 2,161,000</li>
-                <li><strong>Capital:</strong> Paris</li>
-                <li><strong>Languages:</strong> French</li>
-                <li><strong>Currency:</strong> Euro (€)</li>
-                <li><strong>Time Zone:</strong> UTC+1</li>
-                <li><strong>Calling Code:</strong> +33</li>
-                <li><strong>Internet TLD:</strong> .fr</li>
-            </ul>
-        </section>
-        <section class="weather">
-            <h2>Weather <span class="weather-icon">
-                <img src="images/cloudy.svg" alt="Cloudy Weather">
-            </span></h2>            
-    <p><strong>Temperature:</strong> <span id="temperature">8°C</span></p>
-    <p><strong>Conditions:</strong> Cloudy</p>
-    <p><strong>Wind:</strong> <span id="wind-speed">12 km/h</span></p>
-    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
-</section>
-    </main>
-    <footer>
-        <p> &copy; <span id="current-year"></span> Prince Ive Eriabie, Nigeria</p>
-        <p id="lastModified"></p>
-    </footer>
+  <header class="hero">
+    <h1>Paris</h1>
+    <picture>
+      <source srcset="images/paris-large1.webp" media="(min-width: 769px)" />
+      <source srcset="images/paris-small.webp" media="(max-width: 768px)" />
+      <img src="images/paris-large1.webp" alt="Eiffel Tower with the Seine River" />
+    </picture>
+  </header>
+
+  <main class="main-grid">
+    <section class="info-box data">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Area:</strong> 105.4 sq km</li>
+        <li><strong>Population:</strong> 2,161,000</li>
+        <li><strong>Capital:</strong> Paris</li>
+        <li><strong>Languages:</strong> French</li>
+        <li><strong>Currency:</strong> Euro (€)</li>
+        <li><strong>Time Zone:</strong> UTC+1</li>
+        <li><strong>Calling Code:</strong> +33</li>
+        <li><strong>Internet TLD:</strong> .fr</li>
+      </ul>
+    </section>
+
+    <section class="info-box weather">
+      <h2>
+        Weather
+        <span class="weather-icon">
+          <img src="images/cloudy.svg" alt="Cloudy Weather" />
+        </span>
+      </h2>
+      <p><strong>Temperature:</strong> <span id="temperature">8°C</span></p>
+      <p><strong>Conditions:</strong> Cloudy</p>
+      <p><strong>Wind:</strong> <span id="wind-speed">12 km/h</span></p>
+      <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Prince Ive Eriabie, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
