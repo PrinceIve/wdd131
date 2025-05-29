@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Prince Ive Eriabie"/>
+  <meta name="description" content="Prince Ive Eriabie: Temple Album"/>
+  <title>Temple Album</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css"/>
+  <link rel="stylesheet" href="styles/filtered-temples-large.css"/>
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button class="hamburger">☰</button>
+    <nav>
+      <ul>
+        <li><a href="#" data-filter="all">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="filter-title">Home</h2>
+    <section class="temples-gallery"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Prince Ive Eriabie, Lagos Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
