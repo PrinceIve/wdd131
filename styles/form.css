@@ -73,7 +73,7 @@ textarea:focus {
 }
 
 
-button {
+input[type="submit"] {
   background-color: #7F1D1D;
   color: #FFFFFF;         
   font-family: 'Poppins', sans-serif;
