@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Prince Ive Eriabie" />
+  <meta name="description" content="Learn more about Naija Street Bites and the passion behind the project." />
+  <title>About - Naija Street Bites</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo">Naija Street Bites</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dishes.html">Dishes</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-intro">
+      <h1>About Us</h1>
+      <p>Welcome to <strong>Naija Street Bites</strong> — a celebration of Nigeria’s street food culture!</p>
+      <p>Cooked up by food lovers who believe every bite tells a story. We’re here to share it.</p>
+    </section>
+
+    <section class="our-mission">
+      <h2>Our Mission</h2>
+      <p>To spotlight Nigeria's most iconic street foods and the amazing vendors behind them.</p>
+      <p>We build community through shared meals and memories.</p>
+    </section>
+
+    <section class="team">
+      <h2>Meet the Team</h2>
+      <ul>
+        <li><strong>Prince Ive</strong> – Founder & Chief Foodie</li>
+        <li><strong>Amaka</strong> – Designer & Vibes Curator</li>
+        <li><strong>Chuks</strong> – Street Scout</li>
+      </ul>
+    </section>
+
+    <section class="review-form">
+      <h2>Share Your Feedback</h2>
+      <form id="feedbackForm">
+        <label for="product">Dish Reviewed:</label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Dish...</option>
+          <option>Suya</option>
+          <option>Puff-Puff</option>
+          <option>Akara</option>
+          <option>Boli</option>
+          <option>Moi-Moi</option>
+          <option>Eggroll</option>
+        </select>
+
+        <label>Rating:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="rating" value="1" required /> 1</label>
+          <label><input type="radio" name="rating" value="2" /> 2</label>
+          <label><input type="radio" name="rating" value="3" /> 3</label>
+          <label><input type="radio" name="rating" value="4" /> 4</label>
+          <label><input type="radio" name="rating" value="5" /> 5</label>
+        </div>
+
+        <label for="visitDate">Date Visited:</label>
+        <input type="date" id="visitDate" name="visitDate" required />
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us about the vibes..."></textarea>
+
+        <label for="username">Your Name (optional):</label>
+        <input type="text" id="username" name="username" />
+
+        <input type="submit" value="Submit Feedback" />
+      </form>
+      <div id="feedbackConfirmation"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Naija Street Bites. Built with love and jollof rice.</p>
+  </footer>
+</body>
+</html>

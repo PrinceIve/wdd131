@@ -1,153 +1,289 @@
-/* Reset default margin and padding for all elements */
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styles */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #FAF3E0; /* Warm Beige */
+  background-color: #fff9f5;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header styles */
+/* Header */
 header {
-  background-color: #E63946; /* Tomato Red */
-  padding: 1rem;
-  color: white;
+  background-color: #a30505;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
 }
 
-header .logo {
+.logo {
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+  gap: 2rem;
+  list-style: none;
 }
 
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: white;
+nav a {
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
-  color: #FAF3E0; /* Warm Beige */
+nav a.active,
+nav a:hover {
+  border-bottom: 2px solid white;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
-  text-align: center;
-  padding: 2rem;
-  background-color: #E63946; /* Tomato Red */
-  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Featured Dishes */
-.featured-dishes {
-  text-align: center;
-  padding: 2rem;
-}
-
-.featured-dishes h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.dish-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.dish {
-  background-color: #fff;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-
-.dish:hover {
-  background-color: #E63946; /* Tomato Red */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-}
-
-/* Interactive Map */
-#map-placeholder {
-  height: 300px;
-  background-color: #ddd;
-  margin-top: 1rem;
-}
-
-#map {
   padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.hero-overlay h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+/* Page Intro (Dishes) */
+.page-intro {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background-color: #ffe0b2;
+}
+
+.page-intro h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #d84315;
+  margin-bottom: 0.5rem;
+}
+
+.page-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Cards & Grids */
+.dish-grid,
+.dish-gallery {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+  padding: 2rem;
+}
+
+.dish-card,
+.highlight-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-card:hover,
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.dish-card img,
+.highlight-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.dish-card h2,
+.dish-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  color: #bf360c;
+}
+
+.dish-card p,
+.dish-card .description {
+  padding: 0 1rem 1rem;
+  color: #555;
+}
+
+.vendor {
+  padding-bottom: 1rem;
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* Dish of the Day */
+.dish-of-day {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button,
+#newDishBtn,
+.submit-form button,
+input[type="submit"] {
+  background-color: #100163;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover,
+#newDishBtn:hover,
+.submit-form button:hover,
+input[type="submit"]:hover {
+  background-color: #e0380e;
+}
+
+/* Locations Section */
+.locations {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.locations ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.locations li {
+  margin: 0.5rem 0;
 }
 
 /* Submit Form */
 .submit-form {
   padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.submit-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .submit-form form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem;
 }
 
-.submit-form input,
-.submit-form textarea,
-.submit-form button {
-  padding: 1rem;
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
   font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ddd;
 }
 
-.submit-form button {
-  background-color: #E63946; /* Tomato Red */
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+textarea {
+  resize: vertical;
 }
 
-.submit-form button:hover {
-  background-color: #FAF3E0; /* Warm Beige */
-}
-
-/* Footer styles */
-footer {
-  background-color: #E63946; /* Tomato Red */
-  color: white;
-  padding: 2rem;
-}
-
-.footer-grid {
+.radio-group {
   display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+  gap: 1rem;
+  padding: 0.5rem 0;
 }
 
-.footer-grid div {
-  font-size: 1rem;
+/* About Page Layout */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #1d3557;
+}
+
+/* Review Form */
+.review-form {
+  background-color: #f1faee;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* Footer */
+footer {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
 }

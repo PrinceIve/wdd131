@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naija Street Bites</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <script src="scripts/index.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Naija Street Bites</div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="dishes.html">Dishes</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('images/nigerian-suya-32.jpg');">
+    <div class="hero-overlay">
+      <h1>Welcome to Naija Street Bites</h1>
+      <p>A celebration of Nigeria’s most loved street foods.</p>
+    </div>
+  </section>
+
+  <!-- Dish of the Day -->
+  <section class="dish-of-day">
+    <h2>Dish of the Day</h2>
+    <div id="dishOfDay" class="highlight-card" aria-live="polite">
+      <!-- Populated by JavaScript -->
+    </div>
+    <button id="newDishBtn" type="button">Surprise Me!</button>
+  </section>
+
+  <!-- Featured Dishes -->
+  <section id="dishes" class="featured-dishes">
+    <h2>Featured Dishes</h2>
+    <div class="dish-grid">
+
+      <article class="dish-card">
+        <img src="images/nigerian-suya-32.jpg" alt="Suya skewer" loading="lazy" />
+        <h3>Suya</h3>
+        <p>Spicy grilled meat skewers coated with ground peanuts and spices.</p>
+        <p class="vendor"><strong>Vendor:</strong> Galaxy Grill, 12 Market Road, Lagos</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/easy-puff-puff.jpg" alt="Puff-Puff balls" loading="lazy" />
+        <h3>Puff-Puff</h3>
+        <p>Soft, deep-fried sweet dough balls dusted with sugar.</p>
+        <p class="vendor"><strong>Vendor:</strong> Sweet Bites Corner, 45 Foodie Lane, Abuja</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/akara.webp" alt="Akara fritters" loading="lazy" />
+        <h3>Akara</h3>
+        <p>Golden black-eyed pea fritters, crispy outside and fluffy inside.</p>
+        <p class="vendor"><strong>Vendor:</strong> Mama Nkechi’s Stall, 78 Osbourne Street, Port Harcourt</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/bole.jpeg" alt="Roasted plantain (Boli)" loading="lazy" />
+        <h3>Boli</h3>
+        <p>Roasted plantain served with spicy groundnut sauce.</p>
+        <p class="vendor"><strong>Vendor:</strong> Boli Express, 22 Waterfront Drive, Calabar</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/Moi-Moi-Leaf.webp" alt="Moi-Moi wrapped in leaf" loading="lazy" />
+        <h3>Moi-Moi</h3>
+        <p>Steamed bean pudding made from blended black-eyed peas and spices.</p>
+        <p class="vendor"><strong>Vendor:</strong> Hand of God Canteen, 99 Freedom Avenue, Ibadan</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/eggroll.jpeg" alt="Eggroll snack" loading="lazy" />
+        <h3>Eggroll</h3>
+        <p>Crispy pastry filled with egg, vegetables, and spices.</p>
+        <p class="vendor"><strong>Vendor:</strong> Roll & Bite, 18 Unity Road, Enugu</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/gizodo.jpg" alt="Gizdodo mix" loading="lazy" />
+        <h3>Gizdodo</h3>
+        <p>A flavorful combo of gizzard and fried plantain sautéed in spicy pepper sauce.</p>
+        <p class="vendor"><strong>Vendor:</strong> Dodo Hub, 7 Tasty Street, Lagos</p>
+      </article>
+
+      <article class="dish-card">
+        <img src="images/fishroll.jpg" alt="Fish roll snack" loading="lazy" />
+        <h3>Fish Roll</h3>
+        <p>Deep-fried pastry roll filled with seasoned fish mix, crunchy outside, savory inside.</p>
+        <p class="vendor"><strong>Vendor:</strong> Crunchy Wraps, 10 Spice Junction, Uyo</p>
+      </article>
+
+
+    </div>
+  </section>
+
+  <!-- Locations Section -->
+  <section class="locations">
+    <h2>Where to Find These Foods</h2>
+    <ul>
+      <li><strong>Galaxy Grill</strong> – 12 Market Road, Lagos</li>
+      <li><strong>Sweet Bites Corner</strong> – 45 Foodie Lane, Abuja</li>
+      <li><strong>Mama Nkechi’s Stall</strong> – 78 Osbourne Street, Port Harcourt</li>
+      <li><strong>Boli Express</strong> – 22 Waterfront Drive, Calabar</li>
+      <li><strong>Hand of God Canteen</strong> – 99 Freedom Avenue, Ibadan</li>
+      <li><strong>Roll & Bite</strong> – 18 Unity Road, Enugu</li>
+    </ul>
+  </section>
+
+  <!-- Submission Form -->
+  <section id="submit" class="submit-form">
+    <h2>Submit a Street Food You Love</h2>
+    <form>
+      <label for="name">Dish Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+ <footer>
+    <p>&copy; 2025 Naija Street Bites. Built with love and jollof rice.</p>
+  </footer>
+</body>
+</html>

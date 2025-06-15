@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #fffefb;
+  color: #333;
+}
+
+
+/* Header */
+header {
+  background-color: #f57c00;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  border-bottom: 2px solid white;
+}
+
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #1d3557;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.review-form {
+  background-color: #f1faee;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+input[type="submit"] {
+  background-color: #e63946;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #d62839;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  background-color: #1d3557;
+  color: white;
+  font-size: 0.9rem;
+}
